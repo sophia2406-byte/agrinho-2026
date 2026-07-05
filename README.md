@@ -6,7 +6,7 @@
 
 ---
 
-## 📖 Descrição
+##  Descrição
 
 **AgroVivo** é um site interativo, educativo e responsivo que mostra como **tecnologia, inovação e preservação ambiental** podem caminhar juntas. A proposta central é simples e poderosa: **produzir mais não significa destruir**. Ao contrário — o agro brasileiro é mais forte justamente quando cuida do solo, da água e das florestas que o sustentam.
 
@@ -14,19 +14,19 @@ O projeto combina design de qualidade profissional com recursos interativos (qui
 
 ---
 
-## 🎯 Objetivo
+##  Objetivo
 
 Sensibilizar **estudantes, professores, jurados e a comunidade escolar** sobre o equilíbrio entre a produção de alimentos e a proteção do meio ambiente, mostrando de maneira visual e envolvente que o futuro do campo é também o futuro do planeta.
 
 ---
 
-## 💡 Justificativa
+##  Justificativa
 
 O tema do Agrinho 2026 pede uma reflexão urgente: como alimentar uma população que só cresce **sem destruir os recursos naturais**? Este projeto responde a essa pergunta apresentando soluções reais — agricultura de precisão, sensores, energia limpa, reflorestamento e economia circular — de um jeito que qualquer aluno consegue entender e aplicar no dia a dia. Educar hoje é preservar amanhã.
 
 ---
 
-## 🌾 Tema Agrinho
+##  Tema Agrinho
 
 O conteúdo foi construído em torno de três pilares: **produzir, preservar e prosperar**. Cada seção reforça que inovação tecnológica e cuidado ambiental não são opostos, e sim aliados na construção de um agronegócio forte e sustentável.
 
@@ -35,10 +35,6 @@ O conteúdo foi construído em torno de três pilares: **produzir, preservar e p
 ## 🛠️ Tecnologias
 
 Projeto **100% em linguagens nativas da web**, sem frameworks ou bibliotecas externas:
-
-- **HTML5** — estrutura semântica e acessível
-- **CSS3** — Flexbox, Grid, variáveis, animações, glassmorphism e dark mode
-- **JavaScript Vanilla** — toda a interatividade, sem dependências
 
 > As únicas fontes externas são as **Google Fonts** (Fraunces, Instrument Sans e Space Grotesk), carregadas por `<link>` — não são bibliotecas de código.
 
@@ -66,38 +62,22 @@ Projeto **100% em linguagens nativas da web**, sem frameworks ou bibliotecas ext
 └── favicon/
     └── favicon.svg      → Ícone do site
 ```
-
 ---
 
-## ▶️ Como executar
+##  Funcionalidades
 
-Não é necessário instalar nada. Escolha uma das opções:
-
-1. **Abrir direto:** dê dois cliques no arquivo `index.html`.
-2. **Servidor local (recomendado):**
-   ```bash
-   # com Python instalado
-   python -m http.server 8000
-   # depois acesse http://localhost:8000
-   ```
-3. **GitHub Pages:** envie os arquivos para um repositório, vá em *Settings → Pages*, selecione a branch `main` e a pasta raiz (`/root`). O site fica publicado automaticamente.
-
----
-
-## ✨ Funcionalidades
-
-- 🌗 **Modo escuro** com persistência (lembra a escolha do usuário)
-- 🧭 **Navegação fluida** com scroll suave e link ativo por seção (scrollspy)
-- 📊 **Contadores animados** nas estatísticas
-- ❓ **Quiz** com pontuação e mensagem personalizada
-- 🧮 **Calculadora sustentável** que gera um índice e uma dica sob medida
-- 🖼️ **Galeria** com filtro por categoria e modal para ampliar
-- 💬 **Slider de depoimentos** automático e manual
-- 📂 **Acordeões** em Curiosidades e FAQ
-- ✅ **Formulário de contato** com validação em tempo real
-- ⚖️ **Balança do equilíbrio** interativa (assinatura visual do projeto)
-- 🔝 **Botão voltar ao topo** + **barra de progresso** de leitura
-- 🖱️ **Cursor personalizado** e efeitos de hover inteligentes
+-  **Modo escuro** com persistência (lembra a escolha do usuário)
+-  **Navegação fluida** com scroll suave e link ativo por seção (scrollspy)
+-  **Contadores animados** nas estatísticas
+-  **Quiz** com pontuação e mensagem personalizada
+-  **Calculadora sustentável** que gera um índice e uma dica sob medida
+-  **Galeria** com filtro por categoria e modal para ampliar
+-  **Slider de depoimentos** automático e manual
+-  **Acordeões** em Curiosidades e FAQ
+-  **Formulário de contato** com validação em tempo real
+-  **Balança do equilíbrio** interativa (assinatura visual do projeto)
+-  **Botão voltar ao topo** + **barra de progresso** de leitura
+-  **Cursor personalizado** e efeitos de hover inteligentes
 
 ---
 
