@@ -40,7 +40,7 @@ Projeto **100% em linguagens nativas da web**, sem frameworks ou bibliotecas ext
 
 ---
 
-## 📁 Estrutura do projeto
+##  Estrutura do projeto
 
 ```
 /
@@ -81,13 +81,13 @@ Projeto **100% em linguagens nativas da web**, sem frameworks ou bibliotecas ext
 
 ---
 
-## 📱 Responsividade
+##  Responsividade
 
 Testado e otimizado para **desktop, notebook, tablet e celular**, com pontos de quebra em 1200px, 992px, 768px e 560px. Nada quebra: o menu vira um painel deslizante no mobile e todas as grades se reorganizam automaticamente.
 
 ---
 
-## ⚙️ Recursos JavaScript
+##  Recursos JavaScript
 
 `const` / `let` · arrays · objetos · funções · arrow functions · template strings · condicionais · loops · manipulação completa do **DOM** · `localStorage` · `IntersectionObserver` · `requestAnimationFrame` · `FormData` · event listeners · validação com expressões regulares · renderização dinâmica de conteúdo.
 
@@ -95,19 +95,19 @@ Todo o código está **comentado**, explicando cada função e cada bloco.
 
 ---
 
-## 🗂️ Organização dos arquivos
+##  Organização dos arquivos
 
 O código segue separação de responsabilidades: **estrutura** (HTML), **aparência** (CSS) e **comportamento** (JS) em arquivos distintos. O CSS é dividido em estilos gerais e responsividade. Comentários dividem cada arquivo em seções numeradas para facilitar a leitura.
 
 ---
 
-## 📚 Referências
+##  Referências
 
 Conteúdo textual **100% autoral**, elaborado com base em conceitos amplamente conhecidos de agricultura sustentável, educação ambiental e tecnologia no campo (agricultura de precisão, polinização, economia circular e energia renovável). Nenhum texto foi copiado da internet. Ilustrações e ícones criados exclusivamente para o projeto em formato SVG.
 
 ---
 
-## 🙌 Créditos
+##  Créditos
 
 Projeto idealizado, redigido, ilustrado e programado especialmente para o **Concurso Agrinho 2026**. Tipografia via Google Fonts (Fraunces, Instrument Sans, Space Grotesk).
 
@@ -119,6 +119,6 @@ Uso educacional. Livre para consulta, estudo e apresentação no contexto do Con
 
 ---
 
-## 🏷️ Hashtag
+##  Hashtag
 
 **#agrinho2026**
