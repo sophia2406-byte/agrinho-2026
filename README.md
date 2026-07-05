@@ -32,7 +32,7 @@ O conteúdo foi construído em torno de três pilares: **produzir, preservar e p
 
 ---
 
-## 🛠️ Tecnologias
+##  Tecnologias
 
 Projeto **100% em linguagens nativas da web**, sem frameworks ou bibliotecas externas:
 
