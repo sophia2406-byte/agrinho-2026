@@ -1,18 +1,4 @@
-/* ================================================================
-   AGROVIVO · Agrinho 2026 — FOLHA DE ESTILO PRINCIPAL
-   Sumário:
-   00. Variáveis (tema claro/escuro)   06. Cards / Painéis
-   01. Reset e base                    07. Acordeão / Stats / Quiz
-   02. Tipografia e utilitários        08. Calculadora / Timeline
-   03. Barra de progresso / Cursor     09. Galeria / Slider
-   04. Cabeçalho e navegação           10. Formulário / Rodapé
-   05. Botões / Hero                   11. Modal / Reveal / Scrollbar
-   ================================================================ */
 
-/* ================================================================
-   00 · VARIÁVEIS CSS — identidade visual própria
-   Paleta: verde floresta, verde folha, terroso, bege, dourado
-   ================================================================ */
 :root {
   /* Cores base */
   --verde-floresta: #0f3320;
@@ -65,9 +51,6 @@
   --sombra-forte: 0 30px 60px -25px rgba(0, 0, 0, 0.8);
 }
 
-/* ================================================================
-   01 · RESET E BASE
-   ================================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -103,9 +86,6 @@ ul { list-style: none; }
 }
 .skip-link:focus { left: 12px; }
 
-/* ================================================================
-   02 · TIPOGRAFIA E UTILITÁRIOS
-   ================================================================ */
 h1, h2, h3 { font-family: var(--fonte-titulo); line-height: 1.08; font-weight: 600; }
 
 .container { width: min(100% - 3rem, var(--container)); margin-inline: auto; }
@@ -140,9 +120,6 @@ h1, h2, h3 { font-family: var(--fonte-titulo); line-height: 1.08; font-weight: 6
   content: "✿"; position: absolute; left: 0; color: var(--verde-folha); font-size: 1.1rem;
 }
 
-/* ================================================================
-   03 · BARRA DE PROGRESSO E CURSOR PERSONALIZADO
-   ================================================================ */
 .progresso { position: fixed; inset: 0 0 auto 0; height: 4px; z-index: 120; background: transparent; }
 .progresso__barra {
   display: block; height: 100%; width: 0%;
@@ -159,9 +136,6 @@ h1, h2, h3 { font-family: var(--fonte-titulo); line-height: 1.08; font-weight: 6
 .cursor.is-ativo { width: 54px; height: 54px; background: rgba(111, 174, 79, 0.18); border-color: var(--dourado); }
 @media (hover: none), (pointer: coarse) { .cursor, .cursor-ponto { display: none; } }
 
-/* ================================================================
-   04 · CABEÇALHO E NAVEGAÇÃO
-   ================================================================ */
 .cabecalho {
   position: fixed; inset: 0 0 auto 0; z-index: 100;
   transition: background var(--transicao), box-shadow var(--transicao), padding var(--transicao);
@@ -210,9 +184,6 @@ h1, h2, h3 { font-family: var(--fonte-titulo); line-height: 1.08; font-weight: 6
 .nav__toggle.is-aberto span:nth-child(2) { opacity: 0; }
 .nav__toggle.is-aberto span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ================================================================
-   05 · BOTÕES E HERO
-   ================================================================ */
 .botao {
   display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.95rem 1.7rem;
   border-radius: 999px; font-weight: 600; font-size: 1rem; letter-spacing: 0.01em;
@@ -265,9 +236,6 @@ h1, h2, h3 { font-family: var(--fonte-titulo); line-height: 1.08; font-weight: 6
 .divisor img { width: 100%; height: 90px; }
 .secao--verde + .divisor, .divisor + .secao--verde { display: none; }
 
-/* ================================================================
-   06 · CARDS E PAINÉIS (Agricultura / Sustentabilidade / Ambiente)
-   ================================================================ */
 .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; }
 .cards--3 { grid-template-columns: repeat(3, 1fr); }
 
@@ -312,9 +280,6 @@ h1, h2, h3 { font-family: var(--fonte-titulo); line-height: 1.08; font-weight: 6
 .num-grande { font-family: var(--fonte-num); font-size: 3rem; color: var(--verde-folha); }
 .sobre__mini span { font-size: 0.92rem; color: var(--texto-suave); max-width: 22ch; }
 
-/* ================================================================
-   07 · ACORDEÃO · STATS · QUIZ
-   ================================================================ */
 .acordeao { display: grid; gap: 0.9rem; }
 .acordeao__item { background: var(--superficie); border: 1px solid var(--borda); border-radius: var(--raio-p); overflow: hidden; transition: border-color 0.3s; }
 .acordeao__item:hover { border-color: var(--verde-folha); }
@@ -349,9 +314,6 @@ h1, h2, h3 { font-family: var(--fonte-titulo); line-height: 1.08; font-weight: 6
 .quiz__resultado h3 { font-size: 1.8rem; margin-bottom: 0.6rem; }
 .quiz__resultado p { color: var(--texto-suave); margin-bottom: 1.4rem; }
 
-/* ================================================================
-   08 · CALCULADORA · LINHA DO TEMPO
-   ================================================================ */
 .calc__form { display: grid; gap: 1.4rem; }
 .calc__grupo { border: 1px solid var(--borda); border-radius: var(--raio-p); padding: 1.2rem 1.4rem; background: var(--superficie); }
 .calc__grupo legend { font-family: var(--fonte-titulo); font-size: 1.1rem; padding: 0 0.5rem; }
@@ -378,9 +340,6 @@ h1, h2, h3 { font-family: var(--fonte-titulo); line-height: 1.08; font-weight: 6
 .linha__item h3 { font-size: 1.3rem; margin: 0.2rem 0 0.4rem; }
 .linha__item p { color: var(--texto-suave); }
 
-/* ================================================================
-   09 · GALERIA · SLIDER
-   ================================================================ */
 .galeria__filtros { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
 .chip { padding: 0.55rem 1.3rem; border-radius: 999px; border: 1.5px solid rgba(255, 255, 255, 0.28); color: var(--bege); font-weight: 500; transition: background 0.25s, color 0.25s, border-color 0.25s; }
 .chip:hover { border-color: var(--dourado-claro); }
@@ -418,9 +377,6 @@ h1, h2, h3 { font-family: var(--fonte-titulo); line-height: 1.08; font-weight: 6
 .slider__ponto { width: 10px; height: 10px; border-radius: 50%; background: var(--borda); transition: background 0.25s, width 0.25s; }
 .slider__ponto.is-ativo { background: var(--dourado); width: 26px; border-radius: 6px; }
 
-/* ================================================================
-   10 · FORMULÁRIO · RODAPÉ
-   ================================================================ */
 .form { display: grid; gap: 1.3rem; }
 .form__campo { display: grid; gap: 0.4rem; }
 .form__campo label { font-weight: 600; font-size: 0.95rem; }
@@ -448,9 +404,6 @@ h1, h2, h3 { font-family: var(--fonte-titulo); line-height: 1.08; font-weight: 6
 .rodape__hashtag { font-family: var(--fonte-num); font-weight: 700; color: var(--dourado-claro); letter-spacing: 0.04em; }
 .rodape__base { border-top: 1px solid rgba(255, 255, 255, 0.12); padding: 1.5rem 0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.6rem; font-size: 0.88rem; color: var(--verde-claro); width: min(100% - 3rem, var(--container)); margin-inline: auto; }
 
-/* ================================================================
-   11 · MODAL · SCROLL REVEAL · SCROLLBAR · MOVIMENTO REDUZIDO
-   ================================================================ */
 /* Voltar ao topo */
 .topo {
   position: fixed; right: 24px; bottom: 24px; z-index: 90; width: 52px; height: 52px; border-radius: 50%;
