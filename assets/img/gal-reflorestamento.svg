@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Ilustração de mudas de árvores sendo plantadas em uma área de reflorestamento">
+<rect width="800" height="600" fill="#dfeecb"/>
+<rect y="400" width="800" height="200" fill="#4f8a3f"/>
+<g><g transform="translate(160 400)"><rect x="-4" y="0" width="8" height="40" fill="#3a2a1c"/><circle cx="0" cy="-6" r="26" fill="#2c5a2a"/></g>
+<g transform="translate(330 400)"><rect x="-5" y="0" width="10" height="60" fill="#3a2a1c"/><circle cx="0" cy="-16" r="40" fill="#347a3a"/><circle cx="-22" cy="6" r="26" fill="#2c5a2a"/></g>
+<g transform="translate(560 400)"><rect x="-6" y="0" width="12" height="86" fill="#3a2a1c"/><circle cx="0" cy="-30" r="54" fill="#2f6a34"/><circle cx="-34" cy="8" r="32" fill="#296030"/><circle cx="34" cy="4" r="34" fill="#347a3a"/></g></g>
+<g transform="translate(680 470)"><path d="M0 0 c-6 -14 6 -22 6 -22 c 6 10 -2 22 -6 22Z" fill="#6fae4f"/></g>
+<circle cx="120" cy="120" r="46" fill="#f3d385"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Ilustração de sensores de umidade instalados no solo enviando dados para a nuvem">
+<rect width="800" height="600" fill="#f1e9d6"/>
+<rect y="360" width="800" height="240" fill="#8a5a3b"/>
+<rect y="360" width="800" height="34" fill="#6fae4f"/>
+<g fill="#3a2a1c" opacity="0.25"><circle cx="120" cy="470" r="8"/><circle cx="300" cy="520" r="6"/><circle cx="560" cy="450" r="7"/><circle cx="680" cy="540" r="9"/></g>
+<g transform="translate(220 360)" stroke="#274a2b" stroke-width="6" fill="none" stroke-linecap="round">
+<line x1="0" y1="0" x2="0" y2="-120"/><circle cx="0" cy="-130" r="14" fill="#cf9f3f" stroke="none"/>
+<g stroke="#cf9f3f" stroke-width="3"><path d="M14 -150 a26 26 0 0 1 22 22"/><path d="M22 -168 a44 44 0 0 1 36 36"/></g></g>
+<g transform="translate(470 360)" stroke="#274a2b" stroke-width="6" fill="none" stroke-linecap="round">
+<line x1="0" y1="0" x2="0" y2="-90"/><circle cx="0" cy="-100" r="12" fill="#6fae4f" stroke="none"/></g>
+<g transform="translate(560 120)"><ellipse cx="0" cy="0" rx="74" ry="42" fill="#ffffff"/><ellipse cx="-58" cy="10" rx="42" ry="30" fill="#ffffff"/><ellipse cx="52" cy="12" rx="46" ry="30" fill="#ffffff"/>
+<g stroke="#cf9f3f" stroke-width="4"><line x1="-20" y1="42" x2="-30" y2="80"/><line x1="20" y1="42" x2="30" y2="80"/><line x1="0" y1="46" x2="0" y2="88"/></g></g>
+</svg>

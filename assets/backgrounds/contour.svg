@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-opacity="0.55">
+    <path d="M0 60 C 300 20 560 70 840 50 C 1120 30 1300 72 1440 44"/>
+    <path d="M0 100 C 300 62 560 110 840 92 C 1120 74 1300 114 1440 86"/>
+    <path d="M0 140 C 300 104 560 150 840 134 C 1120 118 1300 156 1440 128"/>
+    <path d="M0 180 C 300 146 560 190 840 176 C 1120 162 1300 198 1440 170"/>
+    <path d="M0 220 C 300 188 560 230 840 218 C 1120 206 1300 238 1440 212"/>
+  </g>
+</svg>

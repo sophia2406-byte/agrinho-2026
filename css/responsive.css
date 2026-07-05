@@ -1,0 +1,73 @@
+/* ================================================================
+   AGROVIVO · Agrinho 2026 — RESPONSIVIDADE (Media Queries)
+   Pontos de quebra:
+   1200px · notebooks     992px · tablets landscape
+   768px  · tablets       560px · celulares
+   ================================================================ */
+
+/* ---------- Notebooks / telas médias (≤ 1200px) ---------- */
+@media (max-width: 1200px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .stats__grade { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- Tablets em paisagem (≤ 992px) ---------- */
+@media (max-width: 992px) {
+  .sobre__grade { grid-template-columns: 1fr; gap: 2.4rem; }
+  .cards--3 { grid-template-columns: repeat(2, 1fr); }
+  .galeria__grade { grid-template-columns: repeat(2, 1fr); }
+  .rodape__grade { grid-template-columns: 1fr 1fr; }
+  .rodape__marca { grid-column: 1 / -1; }
+}
+
+/* ---------- Tablets (≤ 768px) — ativa o menu mobile ---------- */
+@media (max-width: 768px) {
+  /* Navegação vira menu deslizante */
+  .nav__toggle { display: flex; order: 3; }
+  .tema-toggle { order: 2; margin-left: auto; }
+  .nav__lista {
+    position: fixed; inset: 0 0 0 auto; width: min(80vw, 320px);
+    flex-direction: column; align-items: flex-start; justify-content: center; gap: 1rem;
+    padding: 2rem; margin: 0; background: var(--superficie);
+    box-shadow: -20px 0 60px -20px rgba(0, 0, 0, 0.4);
+    transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .nav__lista.is-aberto { transform: translateX(0); }
+  .nav__link { font-size: 1.15rem; width: 100%; }
+
+  .ambiente__grade { grid-template-columns: 1fr; }
+  .painel { grid-template-columns: 1fr; }
+  .painel__icone { margin-bottom: 0.4rem; }
+
+  .rodape__base { flex-direction: column; text-align: center; }
+  .balanca { flex-wrap: wrap; justify-content: center; }
+}
+
+/* ---------- Celulares (≤ 560px) ---------- */
+@media (max-width: 560px) {
+  body { font-size: 1rem; }
+  .container { width: calc(100% - 2rem); }
+
+  .cards, .cards--3, .stats__grade, .galeria__grade { grid-template-columns: 1fr; }
+
+  .hero { min-height: 92vh; }
+  .hero__acoes { flex-direction: column; align-items: stretch; }
+  .hero__acoes .botao { justify-content: center; }
+
+  .secao__titulo { font-size: clamp(1.7rem, 8vw, 2.3rem); }
+  .quiz__pergunta { font-size: 1.25rem; }
+
+  .slide__caixa, .calc__resultado, .quiz__caixa { padding: 1.6rem; }
+  .slide__texto { font-size: 1.1rem; }
+
+  .rodape__grade { grid-template-columns: 1fr; }
+  .topo { right: 16px; bottom: 16px; width: 46px; height: 46px; }
+
+  /* Esconde o cursor personalizado em telas pequenas */
+  .cursor, .cursor-ponto { display: none; }
+}
+
+/* ---------- Telas muito largas (≥ 1600px) ---------- */
+@media (min-width: 1600px) {
+  :root { --container: 1320px; }
+}

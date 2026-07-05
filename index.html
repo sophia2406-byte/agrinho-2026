@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-tema="claro">
+<head>
+  <!-- ============================================================
+       META / SEO — Concurso Agrinho 2026
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f3320" />
+  <meta name="author" content="Projeto Agrinho 2026" />
+  <meta name="description" content="Agro forte, futuro sustentável: um projeto interativo que mostra como tecnologia, inovação e preservação ambiental caminham juntas para produzir alimentos sem destruir o planeta. #agrinho2026" />
+  <meta name="keywords" content="Agrinho 2026, agricultura sustentável, tecnologia no campo, meio ambiente, agronegócio, educação ambiental" />
+
+  <!-- Open Graph (compartilhamento em redes sociais) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Agro Forte, Futuro Sustentável — Agrinho 2026" />
+  <meta property="og:description" content="Produzir mais não significa destruir. Descubra o equilíbrio entre produção e meio ambiente." />
+  <meta property="og:locale" content="pt_BR" />
+
+  <title>Agro Forte, Futuro Sustentável · Agrinho 2026</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+
+  <!-- Tipografia (Google Fonts — recurso de fonte, não é biblioteca de código) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Instrument+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Folhas de estilo do projeto -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <!-- Link de acessibilidade: pular direto para o conteúdo -->
+  <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+
+  <!-- ============================================================
+       BARRA DE PROGRESSO DE LEITURA (preenchida via JS no scroll)
+       ============================================================ -->
+  <div class="progresso" role="presentation"><span id="barra-progresso" class="progresso__barra"></span></div>
+
+  <!-- Cursor personalizado (efeito de ponteiro — desativado em toque) -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ponto" id="cursor-ponto" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       CABEÇALHO / NAVEGAÇÃO
+       ============================================================ -->
+  <header class="cabecalho" id="cabecalho">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#inicio" class="marca" aria-label="Página inicial Agrinho 2026">
+        <img src="favicon/favicon.svg" alt="" width="34" height="34" />
+        <span class="marca__texto">Agro<strong>Vivo</strong></span>
+      </a>
+
+      <!-- Botão do menu mobile -->
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-lista" aria-label="Abrir menu de navegação">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__lista" id="nav-lista">
+        <li><a href="#inicio" class="nav__link">Início</a></li>
+        <li><a href="#sobre" class="nav__link">Sobre</a></li>
+        <li><a href="#agricultura" class="nav__link">Tecnologia</a></li>
+        <li><a href="#ambiente" class="nav__link">Ambiente</a></li>
+        <li><a href="#quiz" class="nav__link">Quiz</a></li>
+        <li><a href="#calculadora" class="nav__link">Calculadora</a></li>
+        <li><a href="#galeria" class="nav__link">Galeria</a></li>
+        <li><a href="#contato" class="nav__link nav__link--cta">Contato</a></li>
+      </ul>
+
+      <!-- Botão de troca de tema (claro/escuro) -->
+      <button class="tema-toggle" id="tema-toggle" aria-label="Alternar modo escuro" title="Alternar tema">
+        <svg class="icone-sol" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19" stroke-linecap="round"/></svg>
+        <svg class="icone-lua" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z" stroke-linejoin="round"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         1 · HERO
+         ============================================================ -->
+    <section class="hero" id="inicio">
+      <figure class="hero__fundo">
+        <img src="assets/backgrounds/hero-landscape.svg" alt="" class="hero__paisagem" />
+        <figcaption class="sr-only">Paisagem ilustrada de campos cultivados em curvas de nível ao pôr do sol, com um drone sobrevoando a plantação — a união entre tecnologia e natureza.</figcaption>
+      </figure>
+      <div class="hero__conteudo container">
+        <p class="hero__eyebrow" data-revelar>Concurso Agrinho 2026 · Paraná</p>
+        <h1 class="hero__titulo" data-revelar>
+          Agro forte,<br />
+          <span class="destaque">futuro sustentável</span>
+        </h1>
+        <p class="hero__subtitulo" data-revelar>
+          Produzir mais <strong>não</strong> significa destruir. Quando tecnologia e natureza
+          trabalham juntas, o campo alimenta o mundo e ainda devolve vida ao planeta.
+        </p>
+        <div class="hero__acoes" data-revelar>
+          <a href="#sobre" class="botao botao--primario">Explorar o projeto</a>
+          <a href="#calculadora" class="botao botao--fantasma">Meu índice sustentável</a>
+        </div>
+
+        <!-- Assinatura visual: balança do equilíbrio (interativa via JS) -->
+        <div class="balanca" data-revelar aria-label="Balança do equilíbrio entre produção e meio ambiente">
+          <div class="balanca__lado">
+            <span class="balanca__valor" id="balanca-producao">50%</span>
+            <span class="balanca__rotulo">Produção</span>
+          </div>
+          <button class="balanca__pivo" id="balanca-pivo" aria-label="Reequilibrar produção e natureza" title="Toque para reequilibrar">⚖</button>
+          <div class="balanca__lado balanca__lado--dir">
+            <span class="balanca__valor" id="balanca-natureza">50%</span>
+            <span class="balanca__rotulo">Natureza</span>
+          </div>
+          <div class="balanca__trave"><span class="balanca__peso" id="balanca-peso"></span></div>
+        </div>
+      </div>
+      <a href="#sobre" class="hero__rolagem" aria-label="Rolar para baixo"><span></span></a>
+    </section>
+
+    <!-- Divisor de curvas de nível -->
+    <div class="divisor" aria-hidden="true"><img src="assets/backgrounds/contour.svg" alt="" /></div>
+
+    <!-- ============================================================
+         2 · SOBRE
+         ============================================================ -->
+    <section class="sobre secao" id="sobre">
+      <div class="container sobre__grade">
+        <div class="sobre__texto">
+          <p class="eyebrow" data-revelar>01 · O tema</p>
+          <h2 class="secao__titulo" data-revelar>O equilíbrio é a nova força do campo</h2>
+          <p data-revelar>
+            Durante muito tempo acreditou-se que crescer na lavoura e proteger a natureza eram
+            caminhos opostos. Hoje sabemos que são o <strong>mesmo caminho</strong>. O agro
+            brasileiro é forte justamente quando cuida do solo que o sustenta, da água que o
+            alimenta e das florestas que regulam o clima.
+          </p>
+          <p data-revelar>
+            Este projeto convida estudantes, professores e a comunidade escolar a enxergar a
+            fazenda do futuro: um lugar onde <em>sensores, drones e inteligência artificial</em>
+            convivem com abelhas, rios limpos e árvores nativas. Aqui, tecnologia serve à vida.
+          </p>
+          <ul class="lista-marcada" data-revelar>
+            <li>Produzir alimentos de qualidade para todos.</li>
+            <li>Reduzir o desperdício de água, energia e insumos.</li>
+            <li>Preservar biomas, nascentes e biodiversidade.</li>
+          </ul>
+        </div>
+        <aside class="sobre__cartao" data-revelar aria-label="Ideia central do projeto">
+          <blockquote class="citacao">
+            <p>“A terra não herdamos de nossos pais: nós a tomamos emprestada de nossas crianças.”</p>
+            <cite>— Provérbio adaptado, tema Agrinho 2026</cite>
+          </blockquote>
+          <div class="sobre__mini">
+            <div><strong class="num-grande">3</strong><span>pilares: produzir, preservar, prosperar</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3 · AGRICULTURA INTELIGENTE (cards animados)
+         ============================================================ -->
+    <section class="tech secao secao--verde" id="agricultura">
+      <div class="container">
+        <p class="eyebrow eyebrow--claro" data-revelar>02 · Agricultura inteligente</p>
+        <h2 class="secao__titulo secao__titulo--claro" data-revelar>A tecnologia que planta com precisão</h2>
+        <p class="secao__intro" data-revelar>
+          As mesmas ferramentas que aumentam a colheita ajudam a gastar menos e a poluir menos.
+          Passe o mouse pelos cartões e descubra como.
+        </p>
+
+        <div class="cards" data-revelar>
+          <article class="card" tabindex="0">
+            <span class="card__icone"><img src="assets/icons/sensor.svg" alt="" width="34" height="34" /></span>
+            <h3 class="card__titulo">Sensores no solo</h3>
+            <p>Medem umidade, temperatura e nutrientes em tempo real. Só se irriga e aduba onde é preciso — economizando água e evitando excesso de fertilizante.</p>
+          </article>
+          <article class="card" tabindex="0">
+            <span class="card__icone"><img src="assets/icons/ai.svg" alt="" width="34" height="34" /></span>
+            <h3 class="card__titulo">Inteligência artificial</h3>
+            <p>Algoritmos analisam clima e imagens para prever pragas e a hora certa da colheita, reduzindo perdas e o uso de defensivos.</p>
+          </article>
+          <article class="card" tabindex="0">
+            <span class="card__icone"><img src="assets/icons/drone.svg" alt="" width="34" height="34" /></span>
+            <h3 class="card__titulo">Drones de monitoramento</h3>
+            <p>Sobrevoam a lavoura e enxergam o que o olho não vê: falhas no plantio, doenças e áreas que precisam de cuidado imediato.</p>
+          </article>
+          <article class="card" tabindex="0">
+            <span class="card__icone"><img src="assets/icons/precision.svg" alt="" width="34" height="34" /></span>
+            <h3 class="card__titulo">Agricultura de precisão</h3>
+            <p>Máquinas guiadas por GPS aplicam a dose exata em cada metro do campo. Menos desperdício, mais produtividade e solo protegido.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4 · MEIO AMBIENTE
+         ============================================================ -->
+    <section class="ambiente secao" id="ambiente">
+      <div class="container">
+        <p class="eyebrow" data-revelar>03 · Meio ambiente</p>
+        <h2 class="secao__titulo" data-revelar>Quem cuida da natureza colhe por mais tempo</h2>
+        <p class="secao__intro" data-revelar>
+          Cada recurso natural bem cuidado se transforma em produção duradoura. Preservar é,
+          antes de tudo, um bom negócio para o campo e para todos nós.
+        </p>
+
+        <div class="ambiente__grade" data-revelar>
+          <article class="painel">
+            <span class="painel__icone"><img src="assets/icons/reforest.svg" alt="" width="30" height="30" /></span>
+            <h3>Reflorestamento</h3>
+            <p>Recompor áreas com espécies nativas devolve sombra, abriga animais e protege o solo contra a erosão.</p>
+          </article>
+          <article class="painel">
+            <span class="painel__icone"><img src="assets/icons/water.svg" alt="" width="30" height="30" /></span>
+            <h3>Água</h3>
+            <p>Matas ciliares protegem rios e nascentes. Reúso e irrigação inteligente garantem água limpa para o futuro.</p>
+          </article>
+          <article class="painel">
+            <span class="painel__icone"><img src="assets/icons/soil.svg" alt="" width="30" height="30" /></span>
+            <h3>Solo</h3>
+            <p>Plantio direto e rotação de culturas mantêm a terra viva, fértil e cheia de organismos que a fazem produzir.</p>
+          </article>
+          <article class="painel">
+            <span class="painel__icone"><img src="assets/icons/biodiversity.svg" alt="" width="30" height="30" /></span>
+            <h3>Biodiversidade</h3>
+            <p>Abelhas polinizam, aves controlam pragas e a variedade de vida deixa toda a lavoura mais resistente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5 · SUSTENTABILIDADE (cards)
+         ============================================================ -->
+    <section class="sustent secao secao--bege" id="sustentabilidade">
+      <div class="container">
+        <p class="eyebrow" data-revelar>04 · Sustentabilidade</p>
+        <h2 class="secao__titulo" data-revelar>Um ciclo que não desperdiça nada</h2>
+        <p class="secao__intro" data-revelar>
+          Sustentável é o campo que reaproveita, gera a própria energia e devolve ao ambiente
+          mais do que retira.
+        </p>
+
+        <div class="cards cards--3" data-revelar>
+          <article class="card card--claro" tabindex="0">
+            <span class="card__icone"><img src="assets/icons/circular.svg" alt="" width="34" height="34" /></span>
+            <h3 class="card__titulo">Economia circular</h3>
+            <p>Restos de colheita viram adubo e biogás. O que seria lixo volta como energia e nutriente para a próxima safra.</p>
+          </article>
+          <article class="card card--claro" tabindex="0">
+            <span class="card__icone"><img src="assets/icons/solar.svg" alt="" width="34" height="34" /></span>
+            <h3 class="card__titulo">Energia limpa</h3>
+            <p>Painéis solares e biomassa abastecem a fazenda com energia renovável, reduzindo custos e dependência de combustíveis fósseis.</p>
+          </article>
+          <article class="card card--claro" tabindex="0">
+            <span class="card__icone"><img src="assets/icons/carbon.svg" alt="" width="34" height="34" /></span>
+            <h3 class="card__titulo">Baixo carbono</h3>
+            <p>Árvores e solos saudáveis capturam gás carbônico. A lavoura deixa de ser problema e passa a ser parte da solução climática.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6 · CURIOSIDADES (acordeão)
+         ============================================================ -->
+    <section class="curiosidades secao" id="curiosidades">
+      <div class="container container--estreito">
+        <p class="eyebrow" data-revelar>05 · Você sabia?</p>
+        <h2 class="secao__titulo" data-revelar>Curiosidades do campo sustentável</h2>
+
+        <div class="acordeao" data-revelar>
+          <div class="acordeao__item">
+            <button class="acordeao__cabeca" aria-expanded="false">
+              <span>Uma única abelha ajuda a alimentar milhões de pessoas</span>
+              <span class="acordeao__sinal" aria-hidden="true">+</span>
+            </button>
+            <div class="acordeao__corpo"><p>Cerca de 3 em cada 4 tipos de alimento que chegam ao prato dependem, direta ou indiretamente, da polinização feita por abelhas e outros insetos. Proteger a biodiversidade é proteger a comida.</p></div>
+          </div>
+          <div class="acordeao__item">
+            <button class="acordeao__cabeca" aria-expanded="false">
+              <span>O solo é um ser vivo cheio de moradores</span>
+              <span class="acordeao__sinal" aria-hidden="true">+</span>
+            </button>
+            <div class="acordeao__corpo"><p>Em um punhado de terra saudável existem mais microrganismos do que pessoas no planeta. São eles que transformam matéria orgânica em nutrientes para as plantas.</p></div>
+          </div>
+          <div class="acordeao__item">
+            <button class="acordeao__cabeca" aria-expanded="false">
+              <span>A irrigação inteligente pode poupar rios inteiros</span>
+              <span class="acordeao__sinal" aria-hidden="true">+</span>
+            </button>
+            <div class="acordeao__corpo"><p>Sistemas que regam apenas quando o sensor detecta necessidade chegam a reduzir o consumo de água pela metade, deixando mais recurso para rios, cidades e para a própria lavoura em épocas de seca.</p></div>
+          </div>
+          <div class="acordeao__item">
+            <button class="acordeao__cabeca" aria-expanded="false">
+              <span>Árvores no meio da plantação aumentam a colheita</span>
+              <span class="acordeao__sinal" aria-hidden="true">+</span>
+            </button>
+            <div class="acordeao__corpo"><p>Os sistemas agroflorestais misturam árvores e cultivos. A sombra e as raízes protegem o solo, atraem polinizadores e, com o tempo, elevam a produtividade da área.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7 · ESTATÍSTICAS (contadores animados via JS)
+         ============================================================ -->
+    <section class="stats secao secao--verde" id="estatisticas">
+      <div class="container">
+        <p class="eyebrow eyebrow--claro" data-revelar>06 · Em números</p>
+        <h2 class="secao__titulo secao__titulo--claro" data-revelar>O tamanho do desafio (e da oportunidade)</h2>
+
+        <div class="stats__grade" id="stats-grade" data-revelar>
+          <!-- Cada contador é preenchido pelo JS lendo os atributos data-* -->
+          <div class="stat">
+            <span class="stat__num" data-alvo="10" data-sufixo=" bi">0</span>
+            <p class="stat__rotulo">de pessoas para alimentar até 2050 — sem abrir novas florestas.</p>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-alvo="70" data-sufixo="%">0</span>
+            <p class="stat__rotulo">da água doce usada no mundo vai para a agricultura. Cada gota conta.</p>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-alvo="30" data-sufixo="%">0</span>
+            <p class="stat__rotulo">de redução no uso de insumos é possível com agricultura de precisão.</p>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-alvo="1" data-sufixo=" solo">0</span>
+            <p class="stat__rotulo">planeta. Não existe plano B para o campo nem para a vida.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         8 · QUIZ (perguntas + pontuação, renderizado via JS)
+         ============================================================ -->
+    <section class="quiz secao" id="quiz">
+      <div class="container container--estreito">
+        <p class="eyebrow" data-revelar>07 · Teste seus conhecimentos</p>
+        <h2 class="secao__titulo" data-revelar>Quiz da sustentabilidade</h2>
+        <p class="secao__intro" data-revelar>Quatro perguntas rápidas. Responda e descubra o quanto você já sabe sobre o agro do futuro.</p>
+
+        <div class="quiz__caixa" data-revelar>
+          <div class="quiz__barra"><span id="quiz-progresso" class="quiz__progresso"></span></div>
+          <p class="quiz__contador" id="quiz-contador" aria-live="polite">Pergunta 1 de 4</p>
+          <h3 class="quiz__pergunta" id="quiz-pergunta">Carregando…</h3>
+          <div class="quiz__opcoes" id="quiz-opcoes" role="group" aria-label="Alternativas"></div>
+          <p class="quiz__feedback" id="quiz-feedback" aria-live="polite"></p>
+
+          <!-- Tela de resultado (mostrada ao final) -->
+          <div class="quiz__resultado" id="quiz-resultado" hidden>
+            <h3>Você acertou <span id="quiz-acertos">0</span> de 4!</h3>
+            <p id="quiz-mensagem"></p>
+            <button class="botao botao--primario" id="quiz-reiniciar" type="button">Jogar de novo</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         9 · CALCULADORA SUSTENTÁVEL (índice calculado em JS)
+         ============================================================ -->
+    <section class="calc secao secao--bege" id="calculadora">
+      <div class="container container--estreito">
+        <p class="eyebrow" data-revelar>08 · Faça as contas</p>
+        <h2 class="secao__titulo" data-revelar>Calculadora do índice sustentável</h2>
+        <p class="secao__intro" data-revelar>Responda cinco hábitos do dia a dia e descubra o seu índice — com uma dica personalizada.</p>
+
+        <form class="calc__form" id="calc-form" data-revelar novalidate>
+          <fieldset class="calc__grupo">
+            <legend>1. Como você separa o lixo em casa?</legend>
+            <label class="opcao-radio"><input type="radio" name="q1" value="3" required /> <span>Reciclo e composto os restos</span></label>
+            <label class="opcao-radio"><input type="radio" name="q1" value="2" /> <span>Separo o reciclável</span></label>
+            <label class="opcao-radio"><input type="radio" name="q1" value="1" /> <span>Ainda não separo</span></label>
+          </fieldset>
+
+          <fieldset class="calc__grupo">
+            <legend>2. Como é o seu consumo de água?</legend>
+            <label class="opcao-radio"><input type="radio" name="q2" value="3" /> <span>Reaproveito e evito desperdício</span></label>
+            <label class="opcao-radio"><input type="radio" name="q2" value="2" /> <span>Tento economizar</span></label>
+            <label class="opcao-radio"><input type="radio" name="q2" value="1" /> <span>Não presto muita atenção</span></label>
+          </fieldset>
+
+          <fieldset class="calc__grupo">
+            <legend>3. De onde vem a energia que você usa?</legend>
+            <label class="opcao-radio"><input type="radio" name="q3" value="3" /> <span>Uso fontes limpas / economizo muito</span></label>
+            <label class="opcao-radio"><input type="radio" name="q3" value="2" /> <span>Apago luzes e evito gastos</span></label>
+            <label class="opcao-radio"><input type="radio" name="q3" value="1" /> <span>Consumo sem me preocupar</span></label>
+          </fieldset>
+
+          <fieldset class="calc__grupo">
+            <legend>4. Como você se desloca no dia a dia?</legend>
+            <label class="opcao-radio"><input type="radio" name="q4" value="3" /> <span>A pé, bicicleta ou transporte coletivo</span></label>
+            <label class="opcao-radio"><input type="radio" name="q4" value="2" /> <span>Caronas e trajetos combinados</span></label>
+            <label class="opcao-radio"><input type="radio" name="q4" value="1" /> <span>Sempre sozinho de carro/moto</span></label>
+          </fieldset>
+
+          <fieldset class="calc__grupo">
+            <legend>5. E a sua alimentação?</legend>
+            <label class="opcao-radio"><input type="radio" name="q5" value="3" /> <span>Prefiro alimentos locais e da estação</span></label>
+            <label class="opcao-radio"><input type="radio" name="q5" value="2" /> <span>Evito desperdiçar comida</span></label>
+            <label class="opcao-radio"><input type="radio" name="q5" value="1" /> <span>Não penso sobre isso</span></label>
+          </fieldset>
+
+          <button class="botao botao--primario" type="submit">Calcular meu índice</button>
+          <p class="calc__aviso" id="calc-aviso" role="alert" hidden>Responda todas as 5 perguntas para calcular seu índice. 🙂</p>
+        </form>
+
+        <!-- Resultado da calculadora (preenchido via JS) -->
+        <div class="calc__resultado" id="calc-resultado" hidden aria-live="polite">
+          <div class="calc__medidor"><svg viewBox="0 0 120 120" width="120" height="120"><circle cx="60" cy="60" r="52" class="calc__anel-base"/><circle cx="60" cy="60" r="52" class="calc__anel-frente" id="calc-anel"/></svg><span class="calc__percent" id="calc-percent">0%</span></div>
+          <h3 id="calc-titulo"></h3>
+          <p id="calc-dica"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         10 · LINHA DO TEMPO
+         ============================================================ -->
+    <section class="timeline secao" id="linha-do-tempo">
+      <div class="container">
+        <p class="eyebrow" data-revelar>09 · Evolução</p>
+        <h2 class="secao__titulo" data-revelar>Do arado de madeira ao campo digital</h2>
+
+        <ol class="linha">
+          <li class="linha__item" data-revelar>
+            <span class="linha__ano">Origens</span>
+            <h3>Força humana e animal</h3>
+            <p>Por milênios, plantar dependia de músculos, enxadas e bois. Pouca área, muita dependência do clima.</p>
+          </li>
+          <li class="linha__item" data-revelar>
+            <span class="linha__ano">Séc. XIX</span>
+            <h3>Mecanização</h3>
+            <p>Tratores e máquinas multiplicam a área cultivada, mas trazem também novos impactos ao solo e ao ambiente.</p>
+          </li>
+          <li class="linha__item" data-revelar>
+            <span class="linha__ano">Séc. XX</span>
+            <h3>Revolução verde</h3>
+            <p>Sementes melhoradas e insumos aumentam a produção mundial. A humanidade aprende que produzir também exige responsabilidade.</p>
+          </li>
+          <li class="linha__item" data-revelar>
+            <span class="linha__ano">Hoje</span>
+            <h3>Agricultura digital</h3>
+            <p>Sensores, satélites e IA fazem a fazenda pensar. Produz-se mais com menos recurso e menos impacto.</p>
+          </li>
+          <li class="linha__item" data-revelar>
+            <span class="linha__ano">Amanhã</span>
+            <h3>Campo regenerativo</h3>
+            <p>A meta é devolver mais do que se retira: solos que capturam carbono, biodiversidade em alta e alimento para todos.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         11 · GALERIA (filtro + modal, cartões renderizados via JS)
+         ============================================================ -->
+    <section class="galeria secao secao--verde" id="galeria">
+      <div class="container">
+        <p class="eyebrow eyebrow--claro" data-revelar>10 · Galeria</p>
+        <h2 class="secao__titulo secao__titulo--claro" data-revelar>O campo do futuro em imagens</h2>
+
+        <!-- Filtros -->
+        <div class="galeria__filtros" id="galeria-filtros" data-revelar role="group" aria-label="Filtrar galeria">
+          <button class="chip is-ativo" data-filtro="todos">Todos</button>
+          <button class="chip" data-filtro="tecnologia">Tecnologia</button>
+          <button class="chip" data-filtro="natureza">Natureza</button>
+          <button class="chip" data-filtro="sustentabilidade">Sustentabilidade</button>
+        </div>
+
+        <!-- Grade de imagens (preenchida via JS) -->
+        <div class="galeria__grade" id="galeria-grade" data-revelar></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         12 · DEPOIMENTOS (slider, fictícios)
+         ============================================================ -->
+    <section class="depo secao" id="depoimentos">
+      <div class="container container--estreito">
+        <p class="eyebrow" data-revelar>11 · Vozes do campo</p>
+        <h2 class="secao__titulo" data-revelar>Depoimentos (fictícios)</h2>
+
+        <div class="slider" data-revelar>
+          <div class="slider__trilho" id="slider-trilho"><!-- slides via JS --></div>
+          <div class="slider__controles">
+            <button class="slider__btn" id="slider-anterior" aria-label="Depoimento anterior">‹</button>
+            <div class="slider__pontos" id="slider-pontos" role="tablist" aria-label="Selecionar depoimento"></div>
+            <button class="slider__btn" id="slider-proximo" aria-label="Próximo depoimento">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         13 · FAQ (acordeão)
+         ============================================================ -->
+    <section class="faq secao secao--bege" id="faq">
+      <div class="container container--estreito">
+        <p class="eyebrow" data-revelar>12 · Perguntas frequentes</p>
+        <h2 class="secao__titulo" data-revelar>Ficou com alguma dúvida?</h2>
+
+        <div class="acordeao" data-revelar>
+          <div class="acordeao__item">
+            <button class="acordeao__cabeca" aria-expanded="false"><span>Produzir muito não prejudica sempre o meio ambiente?</span><span class="acordeao__sinal" aria-hidden="true">+</span></button>
+            <div class="acordeao__corpo"><p>Não necessariamente. O impacto depende de <em>como</em> se produz. Com técnicas sustentáveis é possível colher mais em menos espaço, poupando florestas e recursos naturais.</p></div>
+          </div>
+          <div class="acordeao__item">
+            <button class="acordeao__cabeca" aria-expanded="false"><span>Tecnologia no campo não é coisa só de grandes fazendas?</span><span class="acordeao__sinal" aria-hidden="true">+</span></button>
+            <div class="acordeao__corpo"><p>Cada vez menos. Aplicativos de clima, sensores baratos e cooperativas levam inovação também à agricultura familiar, que produz boa parte da comida do nosso dia a dia.</p></div>
+          </div>
+          <div class="acordeao__item">
+            <button class="acordeao__cabeca" aria-expanded="false"><span>O que eu, estudante, posso fazer?</span><span class="acordeao__sinal" aria-hidden="true">+</span></button>
+            <div class="acordeao__corpo"><p>Muito! Evitar desperdício de comida, economizar água e energia, separar o lixo e espalhar essas ideias. Consumo consciente também é sustentabilidade.</p></div>
+          </div>
+          <div class="acordeao__item">
+            <button class="acordeao__cabeca" aria-expanded="false"><span>Por que esse tema importa para o Agrinho?</span><span class="acordeao__sinal" aria-hidden="true">+</span></button>
+            <div class="acordeao__corpo"><p>Porque o futuro do agro é também o futuro do planeta. Entender esse equilíbrio forma cidadãos capazes de cuidar da terra que nos alimenta.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         14 · CONTATO (formulário com validação em JS)
+         ============================================================ -->
+    <section class="contato secao" id="contato">
+      <div class="container container--estreito">
+        <p class="eyebrow" data-revelar>13 · Fale com o projeto</p>
+        <h2 class="secao__titulo" data-revelar>Deixe sua mensagem</h2>
+        <p class="secao__intro" data-revelar>Tem uma ideia, elogio ou dúvida? Escreva pra gente. (Este é um formulário demonstrativo, sem envio real.)</p>
+
+        <form class="form" id="form-contato" data-revelar novalidate>
+          <div class="form__campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Como podemos te chamar?" autocomplete="name" />
+            <small class="form__erro" data-erro="nome"></small>
+          </div>
+          <div class="form__campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seunome@exemplo.com" autocomplete="email" />
+            <small class="form__erro" data-erro="email"></small>
+          </div>
+          <div class="form__campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem…"></textarea>
+            <small class="form__erro" data-erro="mensagem"></small>
+          </div>
+          <button class="botao botao--primario" type="submit">Enviar mensagem</button>
+          <p class="form__sucesso" id="form-sucesso" hidden>Mensagem pronta! Obrigado por participar do Agrinho 2026. 🌱</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       15 · RODAPÉ
+       ============================================================ -->
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div class="rodape__marca">
+        <a href="#inicio" class="marca marca--claro">
+          <img src="favicon/favicon.svg" alt="" width="34" height="34" />
+          <span class="marca__texto">Agro<strong>Vivo</strong></span>
+        </a>
+        <p>Um projeto sobre o equilíbrio entre produzir alimento e preservar a vida.</p>
+      </div>
+
+      <nav class="rodape__nav" aria-label="Links do rodapé">
+        <h3>Navegar</h3>
+        <a href="#sobre">Sobre</a>
+        <a href="#agricultura">Tecnologia</a>
+        <a href="#ambiente">Ambiente</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#galeria">Galeria</a>
+      </nav>
+
+      <div class="rodape__social">
+        <h3>Redes sociais (fictícias)</h3>
+        <div class="rodape__icones">
+          <a href="#contato" aria-label="Instagram fictício do projeto" class="rs"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#contato" aria-label="YouTube fictício do projeto" class="rs"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M11 9.5v5l4-2.5-4-2.5Z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#contato" aria-label="Facebook fictício do projeto" class="rs"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 8h2V5h-2a3 3 0 0 0-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8a1 1 0 0 1 1 0Z" stroke-linejoin="round"/></svg></a>
+        </div>
+        <p class="rodape__hashtag">#agrinho2026</p>
+      </div>
+    </div>
+
+    <div class="rodape__base">
+      <p>© <span id="ano-atual">2026</span> AgroVivo · Projeto desenvolvido exclusivamente para o <strong>Concurso Agrinho 2026</strong>.</p>
+      <p class="rodape__creditos">Feito com HTML, CSS e JavaScript puro · <span id="hora-local"></span></p>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <button class="topo" id="botao-topo" aria-label="Voltar ao topo" title="Voltar ao topo">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V6M6 12l6-6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <!-- ============================================================
+       MODAL DA GALERIA
+       ============================================================ -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" hidden>
+    <div class="modal__fundo" id="modal-fundo"></div>
+    <div class="modal__caixa">
+      <button class="modal__fechar" id="modal-fechar" aria-label="Fechar imagem">✕</button>
+      <img src="" alt="" id="modal-img" />
+      <h3 id="modal-titulo"></h3>
+      <p id="modal-legenda"></p>
+    </div>
+  </div>
+
+  <!-- Script principal do projeto -->
+  <script src="js/script.js"></script>
+</body>
+</html>
