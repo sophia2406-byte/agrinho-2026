@@ -1,17 +1,11 @@
-/* ================================================================
-   AGROVIVO · Agrinho 2026 — RESPONSIVIDADE (Media Queries)
-   Pontos de quebra:
-   1200px · notebooks     992px · tablets landscape
-   768px  · tablets       560px · celulares
-   ================================================================ */
 
-/* ---------- Notebooks / telas médias (≤ 1200px) ---------- */
+
+
 @media (max-width: 1200px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
   .stats__grade { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* ---------- Tablets em paisagem (≤ 992px) ---------- */
 @media (max-width: 992px) {
   .sobre__grade { grid-template-columns: 1fr; gap: 2.4rem; }
   .cards--3 { grid-template-columns: repeat(2, 1fr); }
@@ -20,7 +14,6 @@
   .rodape__marca { grid-column: 1 / -1; }
 }
 
-/* ---------- Tablets (≤ 768px) — ativa o menu mobile ---------- */
 @media (max-width: 768px) {
   /* Navegação vira menu deslizante */
   .nav__toggle { display: flex; order: 3; }
@@ -43,7 +36,6 @@
   .balanca { flex-wrap: wrap; justify-content: center; }
 }
 
-/* ---------- Celulares (≤ 560px) ---------- */
 @media (max-width: 560px) {
   body { font-size: 1rem; }
   .container { width: calc(100% - 2rem); }
@@ -67,7 +59,6 @@
   .cursor, .cursor-ponto { display: none; }
 }
 
-/* ---------- Telas muito largas (≥ 1600px) ---------- */
 @media (min-width: 1600px) {
   :root { --container: 1320px; }
 }
