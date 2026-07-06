@@ -1,21 +1,6 @@
-/* ================================================================
-   AGROVIVO · Agrinho 2026 — SCRIPT PRINCIPAL (JavaScript Vanilla)
-   Organização:
-   00. Utilitários            06. Contadores animados
-   01. Tema (dark mode)       07. Quiz
-   02. Cabeçalho / scrollspy  08. Calculadora sustentável
-   03. Menu mobile            09. Galeria (filtro + modal)
-   04. Progresso / topo       10. Slider de depoimentos
-   05. Scroll reveal          11. Acordeões · Formulário · Cursor
-   ================================================================ */
-
 /* Executa apenas quando o DOM estiver totalmente carregado */
 document.addEventListener("DOMContentLoaded", () => {
   "use strict";
-
-  /* ==============================================================
-     00 · UTILITÁRIOS — atalhos e textos dinâmicos
-     ============================================================== */
 
   // Seletores curtos para facilitar a leitura do código
   const $ = (seletor, escopo = document) => escopo.querySelector(seletor);
@@ -37,9 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
   atualizarHora();
   setInterval(atualizarHora, 30000); // reatualiza a cada 30s
 
-  /* ==============================================================
-     01 · TEMA (MODO ESCURO) com persistência em localStorage
-     ============================================================== */
   const html = document.documentElement;
   const botaoTema = $("#tema-toggle");
   const CHAVE_TEMA = "agrinho-tema";
@@ -58,9 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   if (botaoTema) botaoTema.addEventListener("click", alternarTema);
 
-  /* ==============================================================
-     02 · CABEÇALHO FIXO + SCROLLSPY (link ativo conforme a seção)
-     ============================================================== */
   const cabecalho = $("#cabecalho");
   const linksNav = $$(".nav__link");
   const secoes = $$("main section[id]");
@@ -83,9 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  /* ==============================================================
-     03 · MENU MOBILE
-     ============================================================== */
   const toggle = $("#nav-toggle");
   const lista = $("#nav-lista");
 
@@ -105,9 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   );
 
-  /* ==============================================================
-     04 · BARRA DE PROGRESSO DE LEITURA + BOTÃO VOLTAR AO TOPO
-     ============================================================== */
   const barra = $("#barra-progresso");
   const botaoTopo = $("#botao-topo");
 
@@ -134,9 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", aoRolar, { passive: true });
   aoRolar(); // executa uma vez no carregamento
 
-  /* ==============================================================
-     05 · SCROLL REVEAL manual (via IntersectionObserver)
-     ============================================================== */
   const elementosRevelar = $$("[data-revelar]");
   const observadorRevelar = new IntersectionObserver(
     (entradas, obs) => {
@@ -151,9 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   elementosRevelar.forEach((el) => observadorRevelar.observe(el));
 
-  /* ==============================================================
-     06 · CONTADORES ANIMADOS (estatísticas)
-     ============================================================== */
   const numeros = $$(".stat__num");
 
   // Anima um número de 0 até o valor alvo usando requestAnimationFrame
@@ -187,9 +154,6 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   numeros.forEach((n) => observadorNumeros.observe(n));
 
-  /* ==============================================================
-     07 · QUIZ — perguntas em array, pontuação e resultado
-     ============================================================== */
   // Banco de perguntas: objeto com enunciado, opções e índice da correta
   const perguntas = [
     {
@@ -305,9 +269,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnReiniciar) btnReiniciar.addEventListener("click", reiniciarQuiz);
   if (elPergunta) mostrarPergunta(); // inicia o quiz
 
-  /* ==============================================================
-     08 · CALCULADORA SUSTENTÁVEL — processa dados e gera índice
-     ============================================================== */
   const formCalc = $("#calc-form");
   const resultadoCalc = $("#calc-resultado");
   const anelCalc = $("#calc-anel");
@@ -384,9 +345,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ==============================================================
-     09 · GALERIA — cartões via array, filtro, lazy load e modal
-     ============================================================== */
   // Dados das imagens da galeria
   const imagens = [
     { src: "assets/img/gal-precisao.svg", titulo: "Trator autônomo", legenda: "Máquinas guiadas por GPS aplicam a dose exata em cada metro.", cat: "tecnologia" },
@@ -478,9 +436,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ==============================================================
-     10 · SLIDER DE DEPOIMENTOS (fictícios) — auto + manual
-     ============================================================== */
   const depoimentos = [
     { texto: "Depois que passamos a monitorar o solo, gastamos menos água e colhemos mais. A tecnologia virou aliada da natureza.", nome: "Marina Cardoso", papel: "Produtora rural (fictícia)", ini: "MC" },
     { texto: "Meus alunos entenderam que cuidar do meio ambiente e produzir alimento são a mesma missão. O projeto abriu olhos.", nome: "Prof. Alberto Lima", papel: "Educador (fictício)", ini: "AL" },
@@ -547,10 +502,6 @@ document.addEventListener("DOMContentLoaded", () => {
       reiniciarAuto();
     });
   }
-
-  /* ==============================================================
-     11 · ACORDEÕES · FORMULÁRIO · CURSOR PERSONALIZADO
-     ============================================================== */
 
   /* --- Acordeões (Curiosidades e FAQ) --- */
   const cabecas = $$(".acordeao__cabeca");
@@ -648,9 +599,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ==============================================================
-     12 · BALANÇA DO EQUILÍBRIO (assinatura interativa do hero)
-     ============================================================== */
   const balancaProducao = $("#balanca-producao");
   const balancaNatureza = $("#balanca-natureza");
   const balancaPeso = $("#balanca-peso");
